@@ -1,0 +1,109 @@
+/*
+Color	Hex	RGB	Usage
+Black / Charcoal	#141414	20, 20, 20	Headers, body text, dark sections
+Navy Blue	#163A63	22, 58, 99	Buttons, links, accents
+White	#FFFFFF	255, 255, 255	Backgrounds and text 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  font-family: "Libertinus Math", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 3;
+  background-image: url(homepage1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  animation: ripple 30s ease-in-out infinite alternate;
+}
+
+@keyframes ripple { 0% { background-position: 80% 50%; background-size: 110%; } 100% { background-position: 20% 50%; background-size: 120%; } }
+
+.section1 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	line-height: 4vw;
+	min-height: 10vw;
+}
+
+.section1text {
+	color: #FFFFFF;
+}
+.section1text h1 {
+	font-size: 5vw;
+}
+
+.section1text p {
+	font-size: 2vw;
+}
+
+
+
+.table {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	width: 90%;
+	margin: 0 auto;
+	border: 10px solid;
+	background-color: #272827;
+	mix-blend-mode: overlay;
+}
+.tabletext {
+	border: 3px solid;
+	text-align: left;
+	padding: 5px;
+	color: white;
+	height: 100px;
+}
+
+.tabletext p{
+	font-size: 21px;
+}
+
+.tabletext h1{
+	font-size: 25px;
+}
+
+.searchbar {
+	width: 90%;
+	position: sticky;
+	background-color: #272827;
+	border: 10px solid black;
+	height: 5%;
+	margin: 0 auto;
+	top: 10;
+	z-index: 100;
+	align-items: center;
+}
+
+.searchbar p {
+	color: white;
+	mix-blend-mode: none;
+	margin-left: 0.5vw;
+	margin-top: -0.6vw;
+	opacity: 0.6;
+}
+
+.searchbar p:hover{
+    opacity: 0;
+}
